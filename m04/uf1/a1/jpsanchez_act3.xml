@@ -1,0 +1,66 @@
+<!--Ex1-->
+<?xml version="1.0" encodinf="UTF-8"?>
+<curs xmlns:participant="http://www.w3.org/participant"
+    xmlns:vehicle="http://www.w3.org/vehicle"
+    data_inici="12-09-2022" data_fi="12-06-2023">
+    <lloc>escola del treball</llo>
+    <participants>
+        <participant dni="49328692V">
+            <nom>Juan</nom>
+            <cognom>Sánchez</cognom>
+            <participant:matricula>1234</participant:matricula>
+            <email>jpsanchez.edt@gmail.com</email>
+            <participant:data>05-09-2022</participant:data>
+            <vehicle num_chasis="1HGBH41JXMN109186">
+                <vehicle:data>12-07-2022</vehicle:data>
+                <vehicle:matricula>0815GYR</vehicle:matricula>
+                <marca>ford</marca>
+                <model>focus</model>
+            </vehicle>
+        </participant>
+    </participants>
+</curs>
+
+
+
+<!--ex2-->
+<?xml version="1.0" encodinf="UTF-8"?>
+<mensaje xmlns:remite="http://www.w3.org/remite"
+    xmlns:destinatario="http://www.w3.org/destinatario">
+    <remite>
+        <remite:nombre>Juan</remite:nombre>
+        <remite:email>jpsanchez.edt@gmail.com</remite:email>
+    </remite>
+    <destinatario>
+        <destinatario:nombre>Isai</destinatario:nombre>
+        <destinatario:email>icercado.edt@gmail.com</destinatario:email>
+    </destinatario>
+    <asunto>Hola Bill</asunto>
+    <texto>
+        <parrafo>¿Como estas?</parrafo>
+    </texto>
+</mensaje>
+
+
+
+<!--Ex3-->
+<?xml version="1.0" encodinf="UTF-8"?>
+<cancion xmlns:compositor="http://www.w3.org/compositor"
+    xmlns:productor="http://www.w3.org/productor"
+    duracion="4:47" anio="2008">
+    <titulo>Give it 2 me</titulo>
+    <compositores>
+        <compositor>
+            <compositor:nombres>Pharrell</compositor:nombres>
+            <compositor:apellidos>Williams</compositor:apellidos>
+        <compositor>
+    </compositores>
+    <productores>
+        <productor>
+            <productor:nombres>Pharrell</productor:nombres>
+            <productor:apellidos>Williams</productor:apellidos>
+        </productor>
+    </productores>
+    <sello>Warner Bros Records</sello>
+    <artista>Madonna</artista>
+</cancion>

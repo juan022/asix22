@@ -1,0 +1,18 @@
+ <!ELEMENT cartelera (pelicula)*>
+ <!ELEMENT pelicula (titulo, titulo_original?, nacionalidad, genero, (clasificacion | sin_clasificar), sinopsis, director, reparto, web?) >
+ <!ELEMENT titulo (#PCDATA)>
+ <!ELEMENT titulo_original (#PCDATA)>
+ <!ELEMENT nacionalidad (#PCDATA)>
+ <!ELEMENT genero (#PCDATA)>
+ <!ELEMENT clasificacion EMPTY>
+ <!ELEMENT sin_clasificar EMPTY>
+ <!ELEMENT sinopsis (#PCDATA)>
+ <!ELEMENT director (#PCDATA)>
+ <!ELEMENT reparto (actor)+>
+ <!ELEMENT web (#PCDATA)>
+ <!ELEMENT actor (#PCDATA)>
+
+ <!ATTLIST pelicula codigo ID #REQUIRED>
+ <!ATTLIST pelicula duracion CDATA "">
+ <!ATTLIST pelicula anyo CDATA "2003">
+ <!ATTLIST clasificacion edad (8 | 12 | 16 | 18 | tp) #REQUIRED>

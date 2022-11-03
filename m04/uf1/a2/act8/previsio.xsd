@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="temps">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="poblacio" minOccurs="1" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="nom" type="xs:string" />
+                            <xs:element name="comarca" type="xs:string" />
+                            <xs:element name="data" minOccurs="1" maxOccurs="unbounded" >
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="maxima" type="xs:int" minOccurs="1"/>
+                                        <xs:element name="minima" type="xs:int" maxOccurs="1"/>
+                                        <xs:element name="vent" type="xs:string" maxOccurs="1" minOccurs="1"/>
+                                        <xs:element name="pluja" type="xs:string" minOccurs="0" maxOccurs="1"/>
+                                        <xs:element name="previsio" minOccurs="1" maxOccurs="unbounded" >
+                                            <xs:complexType>
+                                                <xs:sequence>
+                                                    <xs:element name="estat" type="xs:string" minOccurs="1" maxOccurs="1"/>
+                                                    <xs:element name="graus" type="xs:int" minOccurs="1" maxOccurs="1"/>
+                                                </xs:sequence>
+                                                <xs:attribute name="hora" type="xs:string" use="required"/>
+                                            </xs:complexType>
+                                        </xs:element>
+                                    </xs:sequence>
+                                    <xs:attribute name="dia" type="xs:string" />
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE cartelera SYSTEM "pelicules.dtd">
+<cartelera>
+    <pelicula codigo="A12" duracion="98min" anyo="2003">
+        <titulo>Hola</titulo>
+        <titulo_original>Hola, mar</titulo_original>
+        <nacionalidad>España</nacionalidad>
+        <genero>Drama</genero>
+        <sin_clasificar />
+        <sinopsis>Saludo al mar</sinopsis>
+        <director>Jorge</director>
+        <reparto>
+            <actor>Alicia</actor>
+            <actor>Roberto</actor>
+        </reparto>
+        <web>www.holamar.com</web>
+    </pelicula>
+    <pelicula codigo="A4" duracion="99min" anyo="2006">
+        <titulo>Adio</titulo>
+        <nacionalidad>España</nacionalidad>
+        <genero>Drama</genero>
+        <clasificacion edad="16" />
+        <sinopsis>Saludo al mar</sinopsis>
+        <director>Jorge</director>
+        <reparto>
+            <actor>Alicia</actor>
+            <actor>Roberto</actor>
+        </reparto>
+    </pelicula>
+</cartelera>

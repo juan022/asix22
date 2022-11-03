@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE facturas [
+    <!ELEMENT facturas (factura)>
+    <!ELEMENT factura (emisor, cliente, detalles)>
+        <!ATTLIST factura xmlns:emisor CDATA #FIXED "http://www.w3.org/emisor">
+        <!ATTLIST factura xmlns:cliente CDATA #FIXED "http://www.w3.org/cliente">
+        <!ATTLIST factura num_factura NMTOKEN #REQUIRED>
+        <!ATTLIST factura data_factura CDATA #REQUIRED>
+    <!ELEMENT emisor (emisor:nombre, emisor:CIF, emisor:telefono)>
+    <!ELEMENT emisor:nombre (#PCDATA)>
+    <!ELEMENT emisor:CIF (#PCDATA)>
+    <!ELEMENT emisor:telefono (#PCDATA)>
+    <!ELEMENT cliente (cliente:nombre, cliente:CIF, cliente:telefono)>
+    <!ELEMENT cliente:nombre (#PCDATA)>
+    <!ELEMENT cliente:CIF (#PCDATA)>
+    <!ELEMENT cliente:telefono (#PCDATA)>
+    <!ELEMENT detalles (linea*)>
+        <!ATTLIST detalles importe CDATA #REQUIRED>
+    <!ELEMENT linea (descripcio, quantitat, oferta*, PVP)>
+        <!ATTLIST linea codi ID #REQUIRED>
+        <!ATTLIST linea tipus (Llibre | DVD | Diversos) #IMPLIED>
+    <!ELEMENT descripcio (#PCDATA)>
+    <!ELEMENT quantitat (#PCDATA)>
+    <!ELEMENT oferta EMPTY>
+    <!ELEMENT PVP (#PCDATA)>
+    <!ELEMENT import (#PCDATA)>
+]>
+<facturas>
+    <factura xmlns:emisor="http://www.w3.org/emisor"
+        xmlns:cliente="http://www.w3.org/cliente"
+        num_factura="32" data_factura="21-10-20">
+        <emisor>
+            <emisor:nombre>Librería Pérez</emisor:nombre>
+            <emisor:CIF>44555666B</emisor:CIF>
+            <emisor:telefono>777888999</emisor:telefono>
+        </emisor>
+        <cliente>
+            <cliente:nombre>Biblioteca Txantrea</cliente:nombre>
+            <cliente:CIF>33111222A</cliente:CIF>
+            <cliente:telefono>333999444</cliente:telefono>
+        </cliente>
+        <detalles importe="85€">
+            <linea codi="AW7" tipus="Llibre" >
+                <descripcio>Analítica Web 2.0</descripcio>
+                <quantitat>1</quantitat>
+                <oferta />
+                <PVP>25€</PVP>
+            </linea>
+            <linea codi="CP5" tipus="DVD" >
+                <descripcio>Curso de HTML</descripcio>
+                <quantitat>2</quantitat>
+                <PVP>39€</PVP>
+            </linea>
+        </detalles>
+    </factura>
+</facturas>

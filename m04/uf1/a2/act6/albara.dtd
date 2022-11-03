@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!ELEMENT albara (numero, data, client, articles)>
+<!ELEMENT numero (#PCDATA)>
+<!ELEMENT data (#PCDATA)>
+<!ELEMENT client (nom, poblacio)>
+<!ATTLIST client id NMTOKEN  #REQUIRED>
+<!ELEMENT nom (#PCDATA)>
+<!ELEMENT poblacio (#PCDATA)>
+<!ELEMENT articles (compra*)>
+<!ELEMENT compra (article, quantitat, descompte?)>
+<!ELEMENT article (descripcio, granel?, ampolla?, preu)>
+<!ATTLIST article codi NMTOKEN #REQUIRED>
+<!ELEMENT descripcio (#PCDATA)>
+<!ELEMENT granel EMPTY>
+<!ELEMENT ampolla EMPTY>
+<!ELEMENT preu (#PCDATA)>
+<!ELEMENT quantitat (#PCDATA)>
+<!ELEMENT descompte (#PCDATA)>

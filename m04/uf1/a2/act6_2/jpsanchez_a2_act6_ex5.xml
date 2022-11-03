@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persones xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="persones.xsd">
+    <persona>
+        <nom>Eva</nom>
+        viu a
+        <ciutat>París</ciutat>
+        i té
+        <edat>25</edat>
+        anys.
+    </persona>
+    <persona>
+        <nom>Giovani</nom>
+        viu a
+        <ciutat>Florència</ciutat>
+        i té
+        <edat>26</edat>
+        anys.
+    </persona>
+</persones>

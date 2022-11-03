@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE receta SYSTEM "XMLbasico_01_valida.dtd">
+<receta>Primera receta
+    <titulo>...</titulo>
+    <ingredientes>
+        <ingrediente>...</ingrediente>
+        <ingrediente>...</ingrediente>
+    </ingredientes>
+    <procedimineto>
+        <paso>...</paso>
+    </procedimineto>
+</receta>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE personal [
+	<!ELEMENT personal (persona+)>
+	<!ELEMENT persona (dades, email, url?, relació)>
+	<!ATTLIST persona id ID #REQUIRED>
+	<!ELEMENT dades (nom, cognom)>
+	<!ELEMENT nom (#PCDATA)>
+	<!ELEMENT cognom (#PCDATA)>
+	<!ELEMENT email (#PCDATA)>
+	<!ELEMENT url EMPTY>
+	<!ATTLIST url href CDATA #REQUIRED>
+	<!ELEMENT relació EMPTY>
+	<!ATTLIST relació treballador IDREFS #REQUIRED>
+	<!ATTLIST relació director IDREFS #IMPLIED>
+]>
+<personal>
+	<persona id="A">
+		<dades>
+			<nom>Marcelo</nom>
+			<cognom>Dominguez</cognom>
+		</dades>
+		<email>marcelo@empresa.cat</email>
+		<url href="http://www.empresa.cat" />
+		<relació treballador="B C D" />
+	</persona>
+	<persona id="B">
+		<dades>
+			<nom>Frederic</nom>
+			<cognom>Pi</cognom>
+		</dades>
+		<email>frederic@empresa.cat</email>
+		<relació treballador="C D" director="A" />
+	</persona>
+	<persona id="C">
+		<dades>
+			<nom>Manel</nom>
+			<cognom>Puigdevall</cognom>
+		</dades>
+		<email>mpuigdevall@empresa.cat</email>
+		<relació treballador="B D" director="A" />
+	</persona>
+	<persona id="D">
+		<dades>
+			<nom>Maria</nom>
+			<cognom>Sebastià</cognom>
+		</dades>
+		<email>mari@empresa.cat</email>
+		<url href="http://maria.blogspot.com"/>
+		<relació treballador="B D" director="A" />
+	</persona>
+</personal>

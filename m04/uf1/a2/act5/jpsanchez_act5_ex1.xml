@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE aeroport [
+    <!ELEMENT aeroport (nom, vuelo+, data)>
+    <!ELEMENT nom (#PCDATA)>
+    <!ELEMENT vuelo (diari, origen, desti, hora_de_sortida, hora_arribada)>
+    <!ATTLIST vuelo codi ID #REQUIRED>
+    <!ATTLIST vuelo estado CDATA >
+    <!ELEMENT diari EMPTY>
+    <!ELEMENT origen (#PCDATA)>
+    <!ELEMENT desti (#PCDATA)>
+    <!ELEMENT hora_de_sortida (#PCDATA)>
+    <!ELEMENT hora_arribada (#PCDATA)>
+    <!ELEMENT estado (C | E | R) "E">
+    <!ELEMENT data (#PCDATA)>
+]>
+<aeroport>
+    <nom>JFK</nom>
+    <vuelos>
+        <vuelo codi="V22" estado="R">
+            <diari/>
+            <origen>New York</origen>
+            <desti>Chicago</desti>
+            <hora_de_sortida>9:30</hora_de_sortida>
+            <hora_arribada>11:30</hora_arribada>
+            <stoxk/>
+        </vuelo>
+        <vuelo codi="V23" estado="C">
+            <origen>New York</origen>
+            <desti>Miami</desti>
+            <hora_de_sortida>10:15</hora_de_sortida>
+            <hora_arribada>11:15</hora_arribada>
+        </vuelo>
+    </vuelos>
+    <data>21/10/20</data>
+</aeroport>

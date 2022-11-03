@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!ELEMENT receta ANY>
+<!-- Añadimos los elementos que faltan-->
+<!ELEMENT titulo (#PCDATA)>
+<!ELEMENT ingredientes (ingrediente+)>
+<!ELEMENT ingrediente (#PCDATA)>
+<!ELEMENT procedimineto (paso+)>
+<!ELEMENT paso (#PCDATA)>
